@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-md-3">
+        <div class="thumbnail">
+            <img ng-src="{{movie.multimedia.src}}" style="width: 100%;" alt="{{movie.display_title}}" />
+        </div>
+    </div>
+    <div class="col-md-9">
+        <h4>Movie: {{movie.display_title}}</h4>
+        <p><b>Opening Date:</b> {{movie.opening_date}}</p>
+        <p>{{movie.headline}}</p>
+        <p><b>Publication Date:</b> {{movie.publication_date}}</p>
+        <p><b>Author:</b> {{movie.byline}}</p>
+        <hr>
+        <h5>Summary</h5>
+        <p>{{movie.summary_short}}</p>
+        <a href="{{movie['link'].url}}" target="_blank" class="btn btn-default btn-xs">{{movie['link'].suggested_link_text}} &gt;&gt;&gt;</a>
+    </div>
+</div>

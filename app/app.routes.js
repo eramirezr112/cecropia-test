@@ -7,9 +7,12 @@ angular.module('cecropiaApp.routes', ['ngRoute'])
         $locationProvider.hashPrefix('!');
 
         $routeProvider.when('/home', {
-            templateUrl: 'modules/home/home.html',
+            templateUrl: 'modules/movie/home.html',
             controller: 'HomeController'
+        }).when('/detail/:movieName', {
+            templateUrl: 'modules/movie/detail.html',
+            controller: 'DetailController'
         })
 
-        $routeProvider.otherwise({redirectTo: '/home'});
+        $routeProvider.otherwise({ redirectTo: '/home' });
     }]);
